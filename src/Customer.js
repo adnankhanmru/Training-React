@@ -36,6 +36,34 @@ class Customer extends Component{
                     Age is {this.state.age}
                 </div>
                 <div>
+                    Country name {this.props.country1.name}
+                </div>
+                <div>
+                    ISD code {this.props.country1.isd_code}
+                </div>
+                <div>
+                    <h3>Address</h3>
+                    <table>
+                        {
+                            this.props.address1.map(
+                                a=>
+                                    <tr>
+                                        <td>
+                                            {a.addr_id}
+                                        </td>
+                                        <td>
+                                            {a.location}
+                                        </td>
+                                        <td>
+                                            {a.city}
+                                        </td>
+                                    </tr>
+                            )
+                        }
+                    </table>
+                </div>
+
+                <div>
                     <button type="button" onClick={this.customerChange} class="btn btn-outline-light">Change Customer</button>
                 </div>
             </div>
